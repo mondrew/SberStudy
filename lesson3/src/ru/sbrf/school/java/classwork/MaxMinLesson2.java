@@ -6,7 +6,7 @@ public class MaxMinLesson2 {
 
     public static Integer maxNumber(ArrayList<Integer> list) {
 
-        Integer n = list.get(0);
+        Integer n = list.get(0);//
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i) > n)
                 n = list.get(i);
