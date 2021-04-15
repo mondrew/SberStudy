@@ -5,8 +5,7 @@
 * @version: 1.0 05/04/2021
 * @nickname: mondrew
  */
-
-package ru.sbrf.school.java.homework;
+package ru.sberjava.lesson2.homework;
 import java.util.Scanner;
 
 public class Kth {
