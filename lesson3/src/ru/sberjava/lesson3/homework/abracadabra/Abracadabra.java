@@ -1,10 +1,19 @@
-package ru.sbrf.school.java.homework.abracadabra;
+/*
+ * Abracadabra program - printing string in the frame
+ * The 2nd homework (part 1) on Sber Java Developer Syllabus
+ * @author: Andrei Beseda
+ * @version: 1.0 12/04/2021
+ * @nickname: mondrew
+ */
+
+package ru.sberjava.lesson3.homework.abracadabra;
 import java.util.Scanner;
 
 public class Abracadabra {
 
     public static void  printFrame(long width, long height, String str) {
 
+        // Here I use only one system call "write"
         String  resStr = "";
         long    i = 0;
         long    j = 0;
