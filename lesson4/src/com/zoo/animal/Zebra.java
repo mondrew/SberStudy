@@ -1,5 +1,7 @@
 package com.zoo.animal;
 
+import com.zoo.exception.NegativeNumberException;
+import com.zoo.exception.WrongTypeException;
 import com.zoo.interfaces.Jump;
 import com.zoo.interfaces.Run;
 import com.zoo.interfaces.Walk;
@@ -7,18 +9,19 @@ import com.zoo.interfaces.Swim;
 
 public class Zebra extends Animal implements Jump, Run, Walk, Swim {
 
-    public Zebra() {};
-    public Zebra(String name, Integer age, String color, String type) {
+    public Zebra() { super(); };
+    public Zebra(String name, Integer age, String color, String type)
+                        throws NegativeNumberException, WrongTypeException {
         super(name, age, color, type);
     }
     public void say() {
-        System.out.println("Zeeeeeebraaaaaaaaa");
+        System.out.println(this.name + ": \"Zeeeeeebraaaaaaaaa\"");
     }
     public void eat() {
         System.out.println(this.name + " eats fish: \"Om-nom-nom-nom\"");
     }
     public void makeFun() {
-        System.out.println(this.name + ": running an jumping");
+        System.out.println(this.name + ": *running an jumping*");
     }
     public void jump(float height) {
         System.out.println(this.name + " jumps " + height + " meters high");

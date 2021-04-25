@@ -1,5 +1,7 @@
 package com.zoo.animal;
 
+import com.zoo.exception.NegativeNumberException;
+import com.zoo.exception.WrongTypeException;
 import com.zoo.interfaces.Hunt;
 import com.zoo.interfaces.Jump;
 import com.zoo.interfaces.Run;
@@ -9,12 +11,13 @@ import com.zoo.interfaces.Climb;
 
 public class Lion extends Animal implements Hunt, Jump, Run, Walk, Swim, Climb {
 
-    public Lion() {};
-    public Lion(String name, Integer age, String color, String type) {
+    public Lion() { super(); };
+    public Lion(String name, Integer age, String color, String type)
+                        throws NegativeNumberException, WrongTypeException {
         super(name, age, color, type);
     }
     public void say() {
-        System.out.println("Roar!");
+        System.out.println(this.name + ": \"Roar!\"");
     }
     public void eat() {
         System.out.println(this.name + " eats Zerba: \"Om-nom-nom-nom\"");

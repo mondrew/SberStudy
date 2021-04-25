@@ -1,5 +1,7 @@
 package com.zoo.animal;
 
+import com.zoo.exception.NegativeNumberException;
+import com.zoo.exception.WrongTypeException;
 import com.zoo.interfaces.Fly;
 import com.zoo.interfaces.Hunt;
 import com.zoo.interfaces.Walk;
@@ -8,15 +10,16 @@ import com.zoo.interfaces.Run;
 
 public class Eagle extends Animal implements Fly, Hunt, Walk, Jump, Run {
 
-    public Eagle() {};
-    public Eagle(String name, Integer age, String color, String type) {
+    public Eagle() { super(); };
+    public Eagle(String name, Integer age, String color, String type)
+                        throws NegativeNumberException, WrongTypeException {
         super(name, age, color, type);
     }
     public void say() {
-        System.out.println("A-a-a-a-a-a-hr!");
+        System.out.println(this.name + ": \"A-a-a-a-a-a-hr!\"");
     }
     public void eat() {
-        System.out.println(this.name + " eats hare: \"Om-nom-nom-nom\"");
+        System.out.println(this.name + " eats a hare: \"Om-nom-nom-nom\"");
     }
     public void makeFun() {
         System.out.println(this.name + " flies high and chilling");

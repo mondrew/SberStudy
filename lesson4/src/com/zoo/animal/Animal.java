@@ -1,4 +1,6 @@
 package com.zoo.animal;
+import com.zoo.exception.NegativeNumberException;
+import com.zoo.exception.WrongTypeException;
 
 public abstract class Animal {
 
@@ -8,10 +10,15 @@ public abstract class Animal {
     protected String  type; // carnivore or herbivore
 
     public Animal() {} // why it doesn't overriding parameterized constructor?
-    public Animal(String name, Integer age, String color, String type) {
+    public Animal(String name, Integer age, String color, String type)
+                        throws NegativeNumberException, WrongTypeException {
         this.name = name;
+        if (age < 0)
+            throw (new NegativeNumberException("Animal's age can't be negative"));
         this.age = age;
         this.color = color;
+        if (!type.equals("carnivore") && !type.equals("herbivore"))
+            throw (new WrongTypeException("Animal can be only carnivore or herbivore"));
         this.type = type;
         System.out.println("One little " + this.name + " has been born");
     }
@@ -31,10 +38,10 @@ public abstract class Animal {
     }
 
     public void introduce() {
-        System.out.println("I am " + this.name);
-        System.out.println(". I am " + this.age + " year(s) old.");
-        System.out.println(" My color is " + this.color);
-        System.out.println(". I am " + this.type + ".");
+        System.out.print("I am " + this.name + ".");
+        System.out.print(" I am " + this.age + " year(s) old.");
+        System.out.print(" My color is " + this.color + ".");
+        System.out.println(" I am " + this.type + ".");
     }
 
     // Getters
