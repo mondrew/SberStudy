@@ -1,6 +1,6 @@
 /*
  * Abracadabra program - printing string in the frame
- * The 2nd homework (part 1) on Sber Java Developer Syllabus
+ * The 2nd homework (part 1) on Sber Java Developer Syllabus.
  * @author: Andrei Beseda
  * @version: 1.0 12/04/2021
  * @nickname: mondrew
