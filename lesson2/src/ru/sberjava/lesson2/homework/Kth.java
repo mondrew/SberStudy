@@ -5,6 +5,7 @@
 * @version: 1.0 05/04/2021
 * @nickname: mondrew
  */
+
 package ru.sberjava.lesson2.homework;
 import java.util.Scanner;
 
